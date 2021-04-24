@@ -12,7 +12,7 @@ public class JavaVersija {
 		
 		double[] arr = {34.432, 234.2, 0.0 };
 		
-		System.out.println( StringUtils.join(arr, "dfs", 0, 0)) ;
+		System.out.println( StringUtils.join(arr, ':')) ;
 
 	}
 
