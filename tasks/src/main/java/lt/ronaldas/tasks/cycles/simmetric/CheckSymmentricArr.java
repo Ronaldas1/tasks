@@ -36,14 +36,12 @@ public class CheckSymmentricArr {
 	public static void main(String[] args) {
 		System.out.println(new CheckSymmentricArr().isSummetric("1", "2", "4", "4", "2", "1"));
 
-		String polindrome = "Anna";
-
-//		
-//		System.out.println(new CheckSymmentricArr()
-//				.isSummetric(Stream.of(polindrome.toCharArray()).map(Character::toString).toArray(String[]::new)));
-
-		// The same!
+		// Anna
 		System.out.println(new CheckSymmentricArr().isSummetric("A", "n", "n", "a"));
+
+		// Anna The same! but with streams
+		System.out.println(new CheckSymmentricArr()
+				.isSummetric("Anna".chars().mapToObj(Character::toString).toArray(String[]::new)));
 
 	}
 
