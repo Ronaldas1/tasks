@@ -12,7 +12,7 @@ public class InvestmentTaskRecursion {
 	 * @return suma su visais pelnais ir pradine investicija.
 	 */
 	public double makeMoney(double sm, double ir, int p) {
-		return p > 0 ? makeMoney(sm = (sm * ir) + sm, ir, --p) : sm;
+		return p > 0 ? makeMoney(sm * ir + sm, ir, --p) : sm;
 	}
 
 	public static void main(String[] args) {
