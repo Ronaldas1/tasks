@@ -1,5 +1,7 @@
 package lt.ronaldas.tasks.cycles.investment;
 
+import java.util.Iterator;
+
 public class InvestmentTask {
 
 	/**
@@ -12,12 +14,16 @@ public class InvestmentTask {
 	 * @return suma su visais pelnais ir pradine investicija.
 	 */
 	public double makeMoney(double startingMoney, double incomeRate, int periods) {
-		double startingMoney1 = 100;
-		double incomeRate1 = 0.1;
-		double periods1 = (startingMoney1 * incomeRate1)+startingMoney1;
-		//periods = periods - 1;
+		
+		
+		 for( int i = 0; i < periods; i++ ) {
+			 startingMoney = (startingMoney * incomeRate)+startingMoney;
+			 //i++;
+		 }
+			
+		
 
-		return 0.0;
+		return startingMoney;
 	}
 
 	public static void main(String[] args) {
