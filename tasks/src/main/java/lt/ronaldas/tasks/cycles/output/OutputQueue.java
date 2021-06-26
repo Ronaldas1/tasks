@@ -1,4 +1,4 @@
-package lt.ronaldas.tasks.cycles.simmetric;
+package lt.ronaldas.tasks.cycles.output;
 
 public class OutputQueue {
 
