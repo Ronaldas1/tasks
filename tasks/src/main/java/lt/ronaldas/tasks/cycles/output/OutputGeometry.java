@@ -12,7 +12,14 @@ public class OutputGeometry {
 
 	static void soundBars(int[] data) {
 
-		// ???
+		for (int i = 0; i < data.length; i++) {
+
+			
+			for (int y = 0; y < data[i]; y++) {
+				System.out.print(data[i]);
+			}
+			System.out.println();
+		}
 
 	}
 
