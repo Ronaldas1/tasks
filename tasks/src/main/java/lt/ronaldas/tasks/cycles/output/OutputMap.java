@@ -24,6 +24,8 @@ public class OutputMap {
 		char tikslas = 'A';
 		
 		System.out.println( gylioSkenavimas(gelmes[2][1], tikslas));
+		System.out.println(gelmes.length);
+		//System.out.println();
 		
 	}
 	
@@ -33,8 +35,18 @@ public class OutputMap {
 		// ieskoma: 'A' -> 1
 		// ieskoma: 'G' -> 1
 		// ieskoma: ... -> 0
+		char ieskoma1 = 'A';
+		char ieskoma2 = 'G';
+		for (char i = ieskoma1; i < gylis.length-1; i-- ) {
+			for (char j = ieskoma2; j < gylis.length-1; j-- ) {
+				//if (ieskoma = 'A')
+				//return ieskoma2;
+				//System.out.println("G  =" + ieskoma2);
+			}
+		}
 
-		return 0;
+		return ieskoma1; 
+		
 	}
 
 	private static int[][] zemelapioSkenavimas(char[][][] zemelapis) {
