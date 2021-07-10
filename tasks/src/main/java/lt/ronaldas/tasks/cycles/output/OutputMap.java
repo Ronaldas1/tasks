@@ -5,22 +5,29 @@ public class OutputMap {
 	public static void main(String[] args) {
 
 		// 3x3x2
-		char[][][] gelmes = { { { 'G', 'G' }, // [0][0]
-				{ 'G', 'A' }, // [0][1]
-				{ 'G', 'G' } // [0][2]
-				}, { { 'A', 'A' }, // [1][0]
+		char[][][] gelmes = { 
+					{ 
+						{ 'G', 'G' }, // [0][0]
+						{ 'G', 'A' }, // [0][1]
+						{ 'G', 'G' }  // [0][2]
+					}, 
+					{ 
+						{ 'A', 'A' }, // [1][0]
 						{ 'G', 'G' }, // [1][1]
-						{ 'G', 'G' } // [1][2]
-				}, { { 'G', 'G' }, // [2][0]
+						{ 'G', 'G' }  // [1][2]
+					}, 
+					{ 
+						{ 'G', 'G' }, // [2][0]
 						{ 'A', 'G' }, // [2][1]
-						{ 'A', 'G' } // [2][2]
-				} };
+						{ 'A', 'G' }  // [2][2]
+					} 
+				};
 
 		char tikslas = 'A';
 
-		System.out.println(gylioSkenavimas(gelmes[2][1], tikslas));
-		System.out.println(gelmes.length);
-		// System.out.println();
+		//System.out.println(gylioSkenavimas(gelmes[1][0], tikslas));
+		int[][] kurGrezti =  zemelapioSkenavimas(gelmes, tikslas);
+		//TODO isvedimas
 
 	}
 
@@ -30,7 +37,7 @@ public class OutputMap {
 		// ieskoma: 'A' -> 1
 		// ieskoma: 'G' -> 1
 		// ieskoma: ... -> 0
-		 int kiekSurado = 0;
+		int kiekSurado = 0;
 //		for (int i = 0; i < gylis.length; i++) {
 //			if (gylis[i] == ieskoma) {
 //				kiekSurado++;
@@ -41,19 +48,17 @@ public class OutputMap {
 			if (sluoksnis == ieskoma) {
 				kiekSurado++;
 			}
-		} 
+		}
 
 		return kiekSurado;
 
 	}
 
-	private static int[][] zemelapioSkenavimas(char[][][] zemelapis) {
+	private static int[][] zemelapioSkenavimas(char[][][] zemelapis, char tikslas) {
 		// Skenuosim per X, Y
 		// Skaiciuosim kiek ir desim reiksmes i int[][]
-		char x = 'A';
 
-		char zemelapis1[][][] = { {}, {}, {} };
-		// if ( x|| "A" )
+		// TODO
 
 		return null;
 	}
