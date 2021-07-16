@@ -5,29 +5,22 @@ public class OutputMap {
 	public static void main(String[] args) {
 
 		// 3x3x2
-		char[][][] gelmes = { 
-					{ 
-						{ 'G', 'G' }, // [0][0]
-						{ 'G', 'A' }, // [0][1]
-						{ 'G', 'G' }  // [0][2]
-					}, 
-					{ 
-						{ 'A', 'A' }, // [1][0]
+		char[][][] gelmes = { { { 'G', 'G' }, // [0][0]
+				{ 'G', 'A' }, // [0][1]
+				{ 'G', 'G' } // [0][2]
+				}, { { 'A', 'A' }, // [1][0]
 						{ 'G', 'G' }, // [1][1]
-						{ 'G', 'G' }  // [1][2]
-					}, 
-					{ 
-						{ 'G', 'G' }, // [2][0]
+						{ 'G', 'G' } // [1][2]
+				}, { { 'G', 'G' }, // [2][0]
 						{ 'A', 'G' }, // [2][1]
-						{ 'A', 'G' }  // [2][2]
-					} 
-				};
+						{ 'A', 'G' } // [2][2]
+				} };
 
 		char tikslas = 'A';
 
-		//System.out.println(gylioSkenavimas(gelmes[1][0], tikslas));
-		int[][] kurGrezti =  zemelapioSkenavimas(gelmes, tikslas);
-		//TODO isvedimas
+		// System.out.println(gylioSkenavimas(gelmes[1][0], tikslas));
+		int[][] kurGrezti = zemelapioSkenavimas(gelmes, tikslas);
+		// TODO isvedimas
 
 	}
 
@@ -59,8 +52,22 @@ public class OutputMap {
 		// Skaiciuosim kiek ir desim reiksmes i int[][]
 
 		// TODO
+		// int z = 0;
+		OutputMap k = new OutputMap();
+		int auksas[][] = { {}, {} };
+		// gylioSkenavimas (x++);
+		k.gylioSkenavimas(null, tikslas);
+		for (int x = k.gylioSkenavimas(null, tikslas); x < zemelapis.length; x++) {
+			for (int y = k.gylioSkenavimas(null, tikslas); y < zemelapis.length; y++) {
 
-		return null;
+				if (x == tikslas && y == tikslas) {
+					// auksas[x][y]= new auksas[2];
+					return auksas;
+				}
+			}
+		}
+
+		return auksas;
 	}
 
 }
