@@ -47,27 +47,21 @@ public class OutputMap {
 
 	}
 
-	private static int[][] zemelapioSkenavimas(char[][][] zemelapis, char tikslas) {
+	private static int[][] zemelapioSkenavimas(char[][][] zemelapis3D, char tiksloElementas) {
 		// Skenuosim per X, Y
 		// Skaiciuosim kiek ir desim reiksmes i int[][]
 
-		// TODO
-		// int z = 0;
-		OutputMap k = new OutputMap();
-		int auksas[][] = { {}, {} };
-		// gylioSkenavimas (x++);
-		k.gylioSkenavimas(null, tikslas);
-		for (int x = k.gylioSkenavimas(null, tikslas); x < zemelapis.length; x++) {
-			for (int y = k.gylioSkenavimas(null, tikslas); y < zemelapis.length; y++) {
+		int rezultatas[][] = new int[zemelapis3D.length][zemelapis3D[0].length];
 
-				if (x == tikslas && y == tikslas) {
-					// auksas[x][y]= new auksas[2];
-					return auksas;
-				}
+		for (int x = 0; x < zemelapis3D.length; x++) {
+			for (int y = 0; y < zemelapis3D[0].length; y++) {
+
+				rezultatas[x][y] = gylioSkenavimas(zemelapis3D[x][y], tiksloElementas);
 			}
+
 		}
 
-		return auksas;
+		return rezultatas;
 	}
 
 }
