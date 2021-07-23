@@ -3,7 +3,7 @@ package lt.ronaldas.tasks.cycles.output;
 public class DrilingCompany {
 
 	public static void main(String[] args) {
-
+// Padaryti pakeitima "Drilling company" kode, kad neiðvestø neigiamø reikðmiø.
 		// 3x3x2
 		char[][][] gelmes = { { { 'G', 'G', 'G', 'G' }, { 'R', 'A', 'G', 'G' }, { 'G', 'G', 'G', 'G' } },
 				{ { 'A', 'A', 'G', 'G' }, { 'G', 'G', 'G', 'G' }, { 'G', 'G', 'G', 'G' } },
@@ -77,7 +77,7 @@ public class DrilingCompany {
 	private static void outToConsole(double[][] kainos, Character instreadZero) {
 		for (int i = 0; i < kainos.length; i++) {
 			for (int j = 0; j < kainos.length; j++) {
-				if (instreadZero != null && kainos[i][j] == 0) {
+				if (instreadZero != null && kainos[i][j] <= 0) {
 					System.out.print(String.format(" %7s ", instreadZero));
 				} else {
 					System.out.print(String.format(" %7.2f ", kainos[i][j]));
