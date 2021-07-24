@@ -21,7 +21,10 @@ public class OutputMap {
 		// System.out.println(gylioSkenavimas(gelmes[1][0], tikslas));
 		int[][] kurGrezti = zemelapioSkenavimas(gelmes, tikslas);
 		// TODO isvedimas
-
+		// System.out.println();
+		isvestiRezultata(kurGrezti);
+		// System.out.println();
+		// System.out.print(String.format(" %7s ",kurGrezti));
 	}
 
 	private static int gylioSkenavimas(char[] gylis, char ieskoma) {
@@ -64,4 +67,22 @@ public class OutputMap {
 		return rezultatas;
 	}
 
+//"Looking for a gold" þemëlapio iðvedimas á konsolæ.
+	private static void isvestiRezultata(int[][] rezultatas) {
+
+		for (int x = 0; x < rezultatas.length; x++) {
+			for (int y = 0; y < rezultatas[x].length; y++) {
+
+				System.out.print(rezultatas[x][y]);
+				if (y != rezultatas[x].length - 1) {
+
+					System.out.print("-");
+				}
+
+			}
+
+			System.out.println();
+		}
+
+	}
 }
