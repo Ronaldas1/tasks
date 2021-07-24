@@ -72,12 +72,10 @@ public class OutputMap {
 
 		for (int x = 0; x < rezultatas.length; x++) {
 			for (int y = 0; y < rezultatas[x].length; y++) {
-
-				System.out.print(rezultatas[x][y]);
-				if (y != rezultatas[x].length - 1) {
-
+				if (y != 0) {
 					System.out.print("-");
 				}
+				System.out.print(rezultatas[x][y]);
 
 			}
 
